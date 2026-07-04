@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partner Colleges in Canada | Admission Navigate Consultancy</title>
+  <meta name="description" content="Search and filter through our partner colleges and universities in Canada by province, program intake, tuition, and study area.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Custom layout additions for interactive filtering */
+    .filter-bar {
+      background: var(--c-white);
+      padding: 2rem;
+      border-radius: var(--rad-md);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--c-border);
+      margin-bottom: 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      align-items: end;
+    }
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .filter-group label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--c-text-dark);
+    }
+    .filter-input {
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--c-border);
+      border-radius: var(--rad-sm);
+      background: var(--c-bg);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      outline: none;
+      width: 100%;
+      cursor: pointer;
+    }
+    .filter-input:focus {
+      border-color: var(--c-navy);
+      background: var(--c-white);
+    }
+    
+    /* College Profile Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(11, 60, 93, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .modal-overlay.active {
+      display: flex;
+    }
+    .modal-content {
+      background: var(--c-white);
+      max-width: 600px;
+      width: 100%;
+      border-radius: var(--rad-md);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      border: 1px solid var(--c-border);
+      animation: modalFade 0.3s ease;
+    }
+    @keyframes modalFade {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .modal-hdr {
+      background: var(--c-navy);
+      color: var(--c-white);
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .modal-hdr h3 {
+      color: var(--c-white);
+      font-size: 1.5rem;
+    }
+    .modal-close {
+      background: none;
+      border: none;
+      color: var(--c-white);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .modal-body {
+      padding: 2rem;
+    }
+    .modal-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+    }
+    .modal-body td {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--c-border);
+    }
+    .modal-body td:first-child {
+      font-weight: 700;
+      color: var(--c-navy);
+      width: 40%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════════ HEADER ════════ -->
+  <header class="header">
+    <div class="container header-wrap">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.jpg" alt="Admission Navigate Consultancy">
+      </a>
+      
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="study-canada.html">Study in Canada</a></li>
+          <li><a href="colleges.html" class="active">Colleges</a></li>
+          <li><a href="blog.html">Resources</a></li>
+        </ul>
+      </nav>
+      
+      <a href="book-consultation.html" class="btn btn-navy">Book Consultation</a>
+      
+      <button class="mobile-toggle" id="menuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="study-canada.html">Study in Canada</a>
+    <a href="colleges.html">Colleges</a>
+    <a href="blog.html">Resources</a>
+    <a href="book-consultation.html" class="btn btn-navy" style="text-align: center;">Book Consultation</a>
+  </div>
+
+  <!-- ════════ HERO ════════ -->
+  <section class="hero" style="padding: 5rem 0 4rem; text-align: center;">
+    <div class="container" style="max-width: 800px;">
+      <h1>Partner Colleges & <span class="text-gold">Universities</span></h1>
+      <p style="margin-top: 1rem; font-size: 1.15rem; color: rgba(255,255,255,0.9);">Search, filter, and explore direct admissions options at designated learning institutions across Canadian provinces.</p>
+    </div>
+  </section>
+
+  <!-- ════════ FILTER & GRID ════════ -->
+  <section class="section bg-white">
+    <div class="container">
+      
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <div class="filter-group">
+          <label for="provinceOpt">Province</label>
+          <select id="provinceOpt" class="filter-input">
+            <option value="all">All Provinces</option>
+            <option value="Ontario">Ontario (ON)</option>
+            <option value="British Columbia">British Columbia (BC)</option>
+            <option value="Alberta">Alberta (AB)</option>
+            <option value="Nova Scotia">Nova Scotia (NS)</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="programOpt">Popular Program</label>
+          <select id="programOpt" class="filter-input">
+            <option value="all">All Fields</option>
+            <option value="Technology">IT & Tech</option>
+            <option value="Business">Business & Management</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Healthcare">Healthcare</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="tuitionOpt">Tuition Range (CAD / Yr)</label>
+          <select id="tuitionOpt" class="filter-input">
+            <option value="all">All Budgets</option>
+            <option value="low">Under $17,000</option>
+            <option value="mid">$17,000 - $22,000</option>
+            <option value="high">Over $22,000</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="intakeOpt">Next Intake</label>
+          <select id="intakeOpt" class="filter-input">
+            <option value="all">All Intakes</option>
+            <option value="September">September</option>
+            <option value="January">January</option>
+            <option value="May">May</option>
+          </select>
+        </div>
+        <button id="resetFilters" class="btn btn-navy" style="padding: 0.75rem 1.5rem;">Clear Filters</button>
+      </div>
+
+      <!-- College Grid -->
+      <div class="colleges-grid" id="collegeContainer">
+        <!-- Rendered by JS dynamically -->
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- ════════ PROFILE MODAL ════════ -->
+  <div class="modal-overlay" id="profileModal">
+    <div class="modal-content">
+      <div class="modal-hdr">
+        <h3 id="modalName">College Profile</h3>
+        <button class="modal-close" id="closeModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <table>
+          <tr>
+            <td>Location</td>
+            <td id="modalLoc">Toronto, ON</td>
+          </tr>
+          <tr>
+            <td>Province</td>
+            <td id="modalProv">Ontario</td>
+          </tr>
+          <tr>
+            <td>Est. Tuition</td>
+            <td id="modalTuit">$16,500 CAD/year</td>
+          </tr>
+          <tr>
+            <td>Intakes</td>
+            <td id="modalIntake">September, January, May</td>
+          </tr>
+          <tr>
+            <td>PGWP Eligibility</td>
+            <td id="modalPgwp">Yes, up to 3 years</td>
+          </tr>
+          <tr>
+            <td>Top Programs</td>
+            <td id="modalProg">Computer Programming, Business Administration</td>
+          </tr>
+        </table>
+        <div style="display: flex; gap: 1rem;">
+          <a href="book-consultation.html" class="btn btn-gold btn-full">Apply to this DLI</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════ FOOTER ════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <img src="assets/logo.jpg" alt="Admission Navigate Consultancy Logo">
+          <p>Admission Navigate Consultancy is your trusted partner for navigating college and university admissions across Canada.</p>
+          <div class="socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="foot-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="study-canada.html">Study in Canada</a></li>
+            <li><a href="colleges.html">Partner Colleges</a></li>
+          </ul>
+        </div>
+        
+        <div class="foot-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Education Blvd, Suite 400</li>
+            <li><i class="fas fa-envelope"></i> info@admissionnavigate.com</li>
+            <li><i class="fas fa-phone"></i> +1 (778) 889-7490</li>
+          </ul>
+        </div>
+        
+        <div class="foot-col">
+          <h4>Newsletter</h4>
+          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-bottom: 0;">Get the latest updates on Canadian intakes and visa rules.</p>
+          <form class="nl-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+            <input type="email" placeholder="Email Address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="foot-disclaimer">
+        <strong>Disclaimer:</strong> Admission Navigate Consultancy provides educational consulting and admission guidance services for institutions across Canada. We do not guarantee admission decisions. Any immigration-related information is general only and is not legal or regulated immigration advice.
+      </div>
+      
+      <div class="foot-bottom">
+        <div>&copy; <span id="year"></span> Admission Navigate Consultancy. All rights reserved. Designed and developed by dctechoffial <a href="https://www.instagram.com" target="_blank" style="margin-left:10px; color:var(--c-gold);"><i class="fab fa-instagram"></i></a></div>
+        <div class="foot-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/17788897490" target="_blank" class="wa-btn" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Script for filtering logic -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+
+    // College Database
+    const colleges = [
+      {
+        id: 1,
+        name: "Humber College",
+        city: "Toronto",
+        province: "Ontario",
+        img: "assets/destination_ca.png",
+        tuitionVal: 16500,
+        tuition: "$16,500 CAD/yr",
+        intakes: ["September", "January", "May"],
+        field: "Technology",
+        programs: "Computer Programming, Business Administration",
+        pgwp: "Yes, up to 3 years"
+      },
+      {
+        id: 2,
+        name: "Douglas College",
+        city: "New Westminster",
+        province: "British Columbia",
+        img: "assets/alt_hero_campus.png",
+        tuitionVal: 18500,
+        tuition: "$18,500 CAD/yr",
+        intakes: ["September", "January"],
+        field: "Business",
+        programs: "Post-Degree Diploma in Data Analytics, Financial Services",
+        pgwp: "Yes, up to 3 years"
+      },
+      {
+        id: 3,
+        name: "Conestoga College",
+        city: "Kitchener",
+        province: "Ontario",
+        img: "assets/hero_student.png",
+        tuitionVal: 16000,
+        tuition: "$16,000 CAD/yr",
+        intakes: ["September", "January", "May"],
+        field: "Engineering",
+        programs: "Embedded Systems, Applied Manufacturing",
+        pgwp: "Yes, up to 3 years"
+      },
+      {
+        id: 4,
+        name: "Bow Valley College",
+        city: "Calgary",
+        province: "Alberta",
+        img: "assets/v3_students_tech.png",
+        tuitionVal: 15500,
+        tuition: "$15,500 CAD/yr",
+        intakes: ["September", "January", "May"],
+        field: "Healthcare",
+        programs: "Practical Nurse, Pharmacy Technician",
+        pgwp: "Yes, up to 3 years"
+      },
+      {
+        id: 5,
+        name: "Seneca College",
+        city: "Toronto",
+        province: "Ontario",
+        img: "assets/blog_desk.png",
+        tuitionVal: 17200,
+        tuition: "$17,200 CAD/yr",
+        intakes: ["September", "January"],
+        field: "Technology",
+        programs: "Software Development, Cybersecurity",
+        pgwp: "Yes, up to 3 years"
+      },
+      {
+        id: 6,
+        name: "Cape Breton University",
+        city: "Sydney",
+        province: "Nova Scotia",
+        img: "assets/alt_about_students.png",
+        tuitionVal: 23000,
+        tuition: "$23,000 CAD/yr",
+        intakes: ["September", "January", "May"],
+        field: "Business",
+        programs: "MBA in Community Economic Development",
+        pgwp: "Yes, up to 3 years"
+      }
+    ];
+
+    const container = document.getElementById('collegeContainer');
+    const provinceSelect = document.getElementById('provinceOpt');
+    const programSelect = document.getElementById('programOpt');
+    const tuitionSelect = document.getElementById('tuitionOpt');
+    const intakeSelect = document.getElementById('intakeOpt');
+    
+    function renderColleges(data) {
+      container.innerHTML = "";
+      if (data.length === 0) {
+        container.innerHTML = `<div style="grid-column: span 3; text-align: center; padding: 3rem; color: var(--c-text-light);">No colleges found matching the selected filters.</div>`;
+        return;
+      }
+      data.forEach(col => {
+        const card = document.createElement('div');
+        card.className = "col-card";
+        card.style.cursor = "pointer";
+        card.onclick = () => showProfile(col);
+        card.innerHTML = `
+          <div class="col-img">
+            <span class="col-badge">${col.province}</span>
+            <img src="${col.img}" alt="${col.name}">
+          </div>
+          <div class="col-body">
+            <h4>${col.name}</h4>
+            <p><i class="fas fa-map-marker-alt" style="color:var(--c-navy);"></i> ${col.city}, ${col.province.substring(0, 2).toUpperCase()}</p>
+            <div class="col-meta">
+              <div>Tuition: <span>${col.tuition}</span></div>
+              <div>Intake: <span>${col.intakes.join(', ')}</span></div>
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function applyFilters() {
+      const provVal = provinceSelect.value;
+      const progVal = programSelect.value;
+      const tuitVal = tuitionSelect.value;
+      const intaVal = intakeSelect.value;
+
+      const filtered = colleges.filter(col => {
+        // Province Filter
+        if (provVal !== "all" && col.province !== provVal) return false;
+        
+        // Program Filter
+        if (progVal !== "all" && col.field !== progVal) return false;
+        
+        // Tuition Filter
+        if (tuitVal !== "all") {
+          if (tuitVal === "low" && col.tuitionVal >= 17000) return false;
+          if (tuitVal === "mid" && (col.tuitionVal < 17000 || col.tuitionVal > 22000)) return false;
+          if (tuitVal === "high" && col.tuitionVal <= 22000) return false;
+        }
+
+        // Intake Filter
+        if (intaVal !== "all" && !col.intakes.includes(intaVal)) return false;
+
+        return true;
+      });
+
+      renderColleges(filtered);
+    }
+
+    // Event listeners
+    provinceSelect.addEventListener('change', applyFilters);
+    programSelect.addEventListener('change', applyFilters);
+    tuitionSelect.addEventListener('change', applyFilters);
+    intakeSelect.addEventListener('change', applyFilters);
+    
+    document.getElementById('resetFilters').addEventListener('click', () => {
+      provinceSelect.value = "all";
+      programSelect.value = "all";
+      tuitionSelect.value = "all";
+      intakeSelect.value = "all";
+      renderColleges(colleges);
+    });
+
+    // Profile Modal
+    const modal = document.getElementById('profileModal');
+    function showProfile(col) {
+      document.getElementById('modalName').textContent = col.name;
+      document.getElementById('modalLoc').textContent = `${col.city}, ${col.province}`;
+      document.getElementById('modalProv').textContent = col.province;
+      document.getElementById('modalTuit').textContent = col.tuition;
+      document.getElementById('modalIntake').textContent = col.intakes.join(', ');
+      document.getElementById('modalPgwp').textContent = col.pgwp;
+      document.getElementById('modalProg').textContent = col.programs;
+      modal.classList.add('active');
+    }
+
+    document.getElementById('closeModal').addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) modal.classList.remove('active');
+    });
+
+    // Initial render
+    renderColleges(colleges);
+  </script>
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study in Canada Guide | Admission Navigate Consultancy</title>
+  <meta name="description" content="Comprehensive guide to studying in Canada: Why Canada, the education system, popular provinces, work opportunities, and post-graduation pathways.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .ic-strip {
+      display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;
+    }
+    .ic-chip {
+      background: var(--c-white); border: 1px solid var(--c-border);
+      border-radius: var(--rad-sm); padding: 1rem 1.5rem; display: flex;
+      align-items: center; gap: 0.75rem; font-weight: 600; color: var(--c-navy);
+      box-shadow: var(--shadow-sm); min-width: 200px;
+    }
+    .ic-chip i { color: var(--c-gold); font-size: 1.25rem; }
+    .province-card {
+      background: var(--c-white); border-radius: var(--rad-md); padding: 2rem;
+      border-top: 4px solid var(--c-navy); box-shadow: var(--shadow-sm);
+    }
+    .province-card h4 { color: var(--c-navy); font-size: 1.2rem; margin-bottom: 0.75rem; }
+    .province-card ul { display: flex; flex-direction: column; gap: 0.4rem; }
+    .province-card ul li { font-size: 0.9rem; color: var(--c-text-light); padding-left: 1rem; position: relative; }
+    .province-card ul li::before { content: '•'; color: var(--c-gold); position: absolute; left: 0; }
+    .pgwp-table { width: 100%; border-collapse: collapse; background: var(--c-white); border-radius: var(--rad-md); overflow: hidden; box-shadow: var(--shadow-sm); }
+    .pgwp-table thead { background: var(--c-navy); color: var(--c-white); }
+    .pgwp-table th, .pgwp-table td { padding: 1rem 1.5rem; text-align: left; }
+    .pgwp-table tbody tr:nth-child(even) { background: var(--c-bg); }
+    .pgwp-table td:first-child { font-weight: 600; color: var(--c-navy); }
+    .pgwp-table td:last-child { color: var(--c-gold); font-weight: 700; }
+    .anchor-nav { background: var(--c-navy); position: sticky; top: 90px; z-index: 100; }
+    .anchor-nav ul { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+    .anchor-nav a { color: rgba(255,255,255,0.8); font-size: 0.9rem; font-weight: 600; padding: 0.5rem 0; }
+    .anchor-nav a:hover { color: var(--c-gold); }
+  </style>
+</head>
+<body>
+
+  <!-- ════════ HEADER ════════ -->
+  <header class="header">
+    <div class="container header-wrap">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.jpg" alt="Admission Navigate Consultancy">
+      </a>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="study-canada.html" class="active">Study in Canada</a></li>
+          <li><a href="colleges.html">Colleges</a></li>
+          <li><a href="blog.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="book-consultation.html" class="btn btn-navy">Book Consultation</a>
+      <button class="mobile-toggle" id="menuBtn"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="study-canada.html">Study in Canada</a>
+    <a href="colleges.html">Colleges</a>
+    <a href="blog.html">Resources</a>
+    <a href="contact.html">Contact</a>
+    <a href="book-consultation.html" class="btn btn-navy" style="text-align: center;">Book Consultation</a>
+  </div>
+
+  <!-- ════════ HERO ════════ -->
+  <section class="hero" style="padding: 5rem 0; text-align: center;">
+    <div class="container" style="max-width: 850px;">
+      <p style="color:var(--c-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 1rem;">Your Complete Guide</p>
+      <h1>Study in <span class="text-gold">Canada</span></h1>
+      <p style="margin-top: 1rem; font-size: 1.15rem; color: rgba(255,255,255,0.9);">Discover why Canada is the #1 destination for international students — from world-class education to post-graduation work permits and pathways to permanent residency.</p>
+    </div>
+  </section>
+
+  <!-- Sticky Anchor Nav -->
+  <nav class="anchor-nav">
+    <ul>
+      <li><a href="#why-canada">Why Canada</a></li>
+      <li><a href="#education-system">Education System</a></li>
+      <li><a href="#provinces">Popular Provinces</a></li>
+      <li><a href="#work">Work Opportunities</a></li>
+      <li><a href="#post-grad">Post-Graduation</a></li>
+    </ul>
+  </nav>
+
+  <!-- ════════ 1. WHY CANADA ════════ -->
+  <section class="section bg-white" id="why-canada">
+    <div class="container">
+      <div class="sec-title">
+        <h2><span class="text-gold">Why</span> Choose Canada?</h2>
+        <p>Canada consistently ranks as one of the world's safest, most welcoming, and most student-friendly countries for international education.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feat-card">
+          <div class="feat-icon"><i class="fas fa-globe-americas"></i></div>
+          <h4>Global Recognition</h4>
+          <p>Canadian degrees and diplomas are recognized by employers and academic institutions worldwide, giving you a truly international credential.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon"><i class="fas fa-hand-holding-usd"></i></div>
+          <h4>Affordable Education</h4>
+          <p>Compared to the US and UK, Canada offers significantly lower tuition fees with equivalent — often superior — academic quality and resources.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon"><i class="fas fa-shield-alt"></i></div>
+          <h4>Safe & Multicultural</h4>
+          <p>Canada ranks among the world's safest countries. It is one of the most diverse nations, making international students feel welcomed and included.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon"><i class="fas fa-briefcase"></i></div>
+          <h4>Work While Studying</h4>
+          <p>Work up to 20 hrs/week during semester and full-time during scheduled academic breaks with no separate work permit required.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon"><i class="fas fa-id-card"></i></div>
+          <h4>Post-Grad Work Permit</h4>
+          <p>Graduate from an eligible DLI and receive an open PGWP for up to 3 years — a direct bridge to Canadian work experience and permanent residency.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon"><i class="fas fa-leaf"></i></div>
+          <h4>Quality of Life</h4>
+          <p>Clean environment, excellent healthcare, world-class infrastructure, and vibrant cities make Canada one of the best places to live and study.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ 2. EDUCATION SYSTEM ════════ -->
+  <section class="section" id="education-system">
+    <div class="container">
+      <div class="sec-title">
+        <h2>The Canadian <span class="text-gold">Education System</span></h2>
+        <p>Understanding how Canadian higher education is structured helps you choose the right program and institution type.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="can-card">
+          <h4><i class="fas fa-certificate"></i> Certificates &amp; Diplomas</h4>
+          <p style="color:var(--c-text); margin-bottom: 1rem;">Offered by colleges (1–3 years). Career-focused and practical. Provide direct employment pathways.</p>
+          <ul style="display:flex; flex-direction:column; gap:0.35rem; font-size:0.9rem; color:var(--c-text-light);">
+            <li>• 1-Year Certificate</li>
+            <li>• 2-Year Diploma</li>
+            <li>• 3-Year Advanced Diploma</li>
+          </ul>
+        </div>
+        <div class="can-card">
+          <h4><i class="fas fa-graduation-cap"></i> Post-Graduate Certificates</h4>
+          <p style="color:var(--c-text); margin-bottom: 1rem;">1–2 year programs for degree-holders. High demand, specialized, and strongly linked to PGWP eligibility.</p>
+          <ul style="display:flex; flex-direction:column; gap:0.35rem; font-size:0.9rem; color:var(--c-text-light);">
+            <li>• Business Analytics</li>
+            <li>• Health Informatics</li>
+            <li>• Supply Chain Management</li>
+          </ul>
+        </div>
+        <div class="can-card">
+          <h4><i class="fas fa-university"></i> Bachelor's &amp; Master's</h4>
+          <p style="color:var(--c-text); margin-bottom: 1rem;">Offered by universities. Academic and research-focused, typically 4 years for Bachelor's and 2 years for Master's.</p>
+          <ul style="display:flex; flex-direction:column; gap:0.35rem; font-size:0.9rem; color:var(--c-text-light);">
+            <li>• Science / Engineering / Arts</li>
+            <li>• MBA / MS / MFA</li>
+            <li>• PhD / Doctoral Programs</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top: 3rem; background: var(--c-white); border-radius: var(--rad-md); padding: 2.5rem; border-left: 4px solid var(--c-gold); box-shadow: var(--shadow-sm); overflow-x: auto;">
+        <h4 style="color: var(--c-navy); margin-bottom: 1rem;"><i class="fas fa-info-circle" style="color:var(--c-gold);"></i> College-to-University Transfer Pathways</h4>
+        <p>Many students start at a college (lower tuition, faster admission) and transfer their credits to a university to complete a full Bachelor's degree. This is a popular strategy to reduce overall costs while still graduating with a university degree.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ 3. POPULAR PROVINCES ════════ -->
+  <section class="section bg-white" id="provinces">
+    <div class="container">
+      <div class="sec-title">
+        <h2>Popular <span class="text-gold">Provinces</span></h2>
+        <p>Each Canadian province has unique colleges, job markets, and immigration pathways. Here's what you need to know.</p>
+      </div>
+
+      <div class="canada-grid">
+        <div class="province-card">
+          <h4><i class="fas fa-map-marker-alt" style="color:var(--c-gold);"></i> Ontario (ON)</h4>
+          <p style="font-size: 0.9rem; color: var(--c-text-light); margin-bottom: 1rem;">Canada's largest province. Home to Toronto, a global hub for Finance, Technology, and Healthcare.</p>
+          <ul>
+            <li>Popular DLIs: Humber, Conestoga, Seneca, Sheridan, George Brown</li>
+            <li>Strong co-op programs in Engineering and Business</li>
+            <li>Provincial pathway: Ontario Immigrant Nominee Program (OINP)</li>
+            <li>Avg. tuition: $14,000–$18,000 CAD/yr</li>
+          </ul>
+        </div>
+        <div class="province-card">
+          <h4><i class="fas fa-map-marker-alt" style="color:var(--c-gold);"></i> British Columbia (BC)</h4>
+          <p style="font-size: 0.9rem; color: var(--c-text-light); margin-bottom: 1rem;">Known for Vancouver's stunning scenery, mild climate, and tech startup ecosystem.</p>
+          <ul>
+            <li>Popular DLIs: Douglas College, BCIT, Langara, Capilano University</li>
+            <li>Strong in Film, Technology, Hospitality, and Health Sciences</li>
+            <li>Provincial pathway: BC PNP – International Graduate stream</li>
+            <li>Avg. tuition: $16,000–$22,000 CAD/yr</li>
+          </ul>
+        </div>
+        <div class="province-card">
+          <h4><i class="fas fa-map-marker-alt" style="color:var(--c-gold);"></i> Alberta (AB)</h4>
+          <p style="font-size: 0.9rem; color: var(--c-text-light); margin-bottom: 1rem;">Booming economy driven by energy and tech. Lower provincial tax and cost of living.</p>
+          <ul>
+            <li>Popular DLIs: SAIT, NAIT, Bow Valley, MacEwan University</li>
+            <li>Fast growing in Engineering, Energy, Business, and Healthcare</li>
+            <li>Provincial pathway: Alberta Advantage Immigration Program (AAIP)</li>
+            <li>Avg. tuition: $13,000–$17,000 CAD/yr</li>
+          </ul>
+        </div>
+        <div class="province-card">
+          <h4><i class="fas fa-map-marker-alt" style="color:var(--c-gold);"></i> Atlantic Provinces (NS, NB, PEI, NL)</h4>
+          <p style="font-size: 0.9rem; color: var(--c-text-light); margin-bottom: 1rem;">Lower tuition, relaxed lifestyle, dedicated Atlantic immigration pathways with faster PR.</p>
+          <ul>
+            <li>Popular DLIs: NSCC, Cape Breton University, UNB, UPEI</li>
+            <li>Growing sectors: Healthcare, Agriculture, Marine Technology</li>
+            <li>Provincial pathway: Atlantic Immigration Program (AIP)</li>
+            <li>Avg. tuition: $11,000–$16,000 CAD/yr</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ 4. WORK OPPORTUNITIES ════════ -->
+  <section class="section bg-navy" id="work">
+    <div class="container">
+      <div class="sec-title">
+        <h2>Work <span class="text-gold">Opportunities</span></h2>
+        <p>International students in Canada enjoy generous work rights during and after their studies.</p>
+      </div>
+
+      <div class="canada-grid">
+        <div class="can-card">
+          <h4><i class="fas fa-clock"></i> During Studies: Part-Time Work</h4>
+          <p>If enrolled full-time at a designated learning institution, you may work up to <strong>20 hours per week</strong> during regular academic sessions. No separate work permit is needed — your study permit grants this right automatically.</p>
+        </div>
+        <div class="can-card">
+          <h4><i class="fas fa-sun"></i> During Breaks: Full-Time Work</h4>
+          <p>During officially scheduled breaks such as the summer holidays and winter break, you may work <strong>full-time (40+ hours/week)</strong>. This is an excellent opportunity to earn and gain real Canadian experience.</p>
+        </div>
+        <div class="can-card">
+          <h4><i class="fas fa-building"></i> Co-op &amp; Internship Programs</h4>
+          <p>Many Canadian colleges offer co-op programs where you alternate study and paid work terms. Co-op work is on a separate co-op work permit but is integrated into the program structure for a seamless experience.</p>
+        </div>
+        <div class="can-card">
+          <h4><i class="fas fa-network-wired"></i> Popular Industries</h4>
+          <p>High-demand sectors actively hiring international students include: <strong>Information Technology, Financial Services, Healthcare/Nursing, Construction, Retail, and Hospitality</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ 5. POST-GRADUATION OPPORTUNITIES ════════ -->
+  <section class="section" id="post-grad">
+    <div class="container">
+      <div class="sec-title">
+        <h2>Post-Graduation <span class="text-gold">Opportunities</span></h2>
+        <p>Graduating from a Canadian institution opens doors to work permits, permanent residency, and career growth.</p>
+      </div>
+
+      <div class="split" style="align-items: start; gap: 4rem;">
+        <div class="split-text">
+          <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Post-Graduation Work Permit (PGWP)</h2>
+          <p>After graduating from an eligible designated learning institution (DLI) in Canada, you can apply for an open PGWP. This work permit allows you to work for <strong>any employer, anywhere in Canada</strong>, for up to 3 years — building your Canadian work experience which is critical for Express Entry immigration streams.</p>
+
+          <div style="margin: 2rem 0;">
+            <h4 style="color: var(--c-navy); margin-bottom: 1rem;"><i class="fas fa-table" style="color: var(--c-gold);"></i> PGWP Duration by Program Length</h4>
+            <table class="pgwp-table">
+              <thead>
+                <tr><th>Program Length</th><th>PGWP Duration</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Less than 8 months</td><td>Not eligible</td></tr>
+                <tr><td>8 months to less than 2 years</td><td>Equal to study duration</td></tr>
+                <tr><td>2 years or more</td><td>Up to 3 years</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <ul class="check-list">
+            <li><i class="fas fa-check-circle"></i> Apply within 180 days of program completion</li>
+            <li><i class="fas fa-check-circle"></i> Open work permit — work for any employer</li>
+            <li><i class="fas fa-check-circle"></i> Eligible to work across any Canadian province</li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <div class="can-card" style="background: var(--c-white);">
+            <h4><i class="fas fa-passport"></i> Express Entry (CEC)</h4>
+            <p style="color:var(--c-text);">After accumulating 1–2 years of skilled Canadian work experience under your PGWP, you become eligible for the Canadian Experience Class (CEC) — one of the fastest pathways to Permanent Residency.</p>
+          </div>
+          <div class="can-card" style="background: var(--c-white);">
+            <h4><i class="fas fa-map-marker-alt"></i> Provincial Nominee Programs (PNP)</h4>
+            <p style="color:var(--c-text);">Most provinces have international graduate streams under their PNP that allow you to apply for a provincial nomination directly after graduation, boosting your CRS score for PR by up to 600 points.</p>
+          </div>
+          <div class="can-card" style="background: var(--c-white);">
+            <h4><i class="fas fa-users"></i> Rural &amp; Atlantic Immigration Pilots</h4>
+            <p style="color:var(--c-text);">Programs like the Rural &amp; Northern Immigration Pilot and Atlantic Immigration Program offer additional PR pathways especially for graduates of smaller communities and Atlantic Canada institutions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ TESTIMONIALS ════════ -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="sec-title">
+        <h2>Student <span class="text-gold">Stories</span></h2>
+        <p>Our students are now thriving across Canada. Hear from them directly.</p>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"I had no idea about the PGWP rules before I spoke to Admission Navigate. They helped me select a 2-year program that now qualifies me for 3 years of open work permit."</p>
+          <div class="testi-user">
+            <div class="testi-av">A</div>
+            <div><h5>Ayesha R.</h5><span>SAIT, Calgary, AB</span></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"The province selection guidance was spot on. I chose Atlantic Canada and applied for PR within 8 months of finishing my program through the AIP pathway."</p>
+          <div class="testi-user">
+            <div class="testi-av">K</div>
+            <div><h5>Kiran P.</h5><span>Cape Breton University, NS</span></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+          <p>"Understanding the Canadian education system was confusing. Their team broke it down clearly. I got into a post-grad certificate at Humber and I love it here."</p>
+          <div class="testi-user">
+            <div class="testi-av">M</div>
+            <div><h5>Mohamed S.</h5><span>Humber College, Toronto</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ FINAL CTA ════════ -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Ready to Make Canada Your Home?</h2>
+        <p>Book a free consultation and let our advisors build your ideal Canadian study pathway.</p>
+        <a href="book-consultation.html" class="btn btn-navy" style="background: var(--c-navy-dark); color: white; border-radius: 999px; padding: 1rem 3rem;">Book Free Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ FOOTER ════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <img src="assets/logo.jpg" alt="Admission Navigate Consultancy Logo">
+          <p>Your trusted partner for navigating college and university admissions across Canada.</p>
+          <div class="socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="foot-col">
+          <h4>Study in Canada</h4>
+          <ul>
+            <li><a href="study-canada.html#why-canada">Why Canada</a></li>
+            <li><a href="study-canada.html#education-system">Education System</a></li>
+            <li><a href="study-canada.html#provinces">Popular Provinces</a></li>
+            <li><a href="study-canada.html#work">Work Opportunities</a></li>
+            <li><a href="study-canada.html#post-grad">Post-Graduation</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Education Blvd, Suite 400</li>
+            <li><i class="fas fa-envelope"></i> info@admissionnavigate.com</li>
+            <li><i class="fas fa-phone"></i> +1 (778) 889-7490</li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h4>Newsletter</h4>
+          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-bottom: 0;">Get intake alerts and visa rule updates.</p>
+          <form class="nl-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+            <input type="email" placeholder="Email Address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="foot-disclaimer">
+        <strong>Disclaimer:</strong> Admission Navigate Consultancy provides educational consulting and admission guidance services for institutions across Canada. We do not guarantee admission decisions. Any immigration-related information is general only and is not legal or regulated immigration advice.
+      </div>
+      <div class="foot-bottom">
+        <div>&copy; <span id="year"></span> Admission Navigate Consultancy. All rights reserved. Designed and developed by dctechoffial <a href="https://www.instagram.com" target="_blank" style="margin-left:10px; color:var(--c-gold);"><i class="fab fa-instagram"></i></a></div>
+        <div class="foot-links"><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/17788897490" target="_blank" class="wa-btn" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+  </script>
+</body>
+</html>

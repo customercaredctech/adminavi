@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Admission Navigate Consultancy</title>
+  <meta name="description" content="Get in touch with Admission Navigate Consultancy for expert Canadian admissions guidance. Contact us by phone, email, or WhatsApp.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+  <!-- ════════ HEADER ════════ -->
+  <header class="header">
+    <div class="container header-wrap">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.jpg" alt="Admission Navigate Consultancy">
+      </a>
+      
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="study-canada.html">Study in Canada</a></li>
+          <li><a href="colleges.html">Colleges</a></li>
+          <li><a href="blog.html">Resources</a></li>
+        </ul>
+      </nav>
+      
+      <a href="book-consultation.html" class="btn btn-navy">Book Consultation</a>
+      
+      <button class="mobile-toggle" id="menuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="study-canada.html">Study in Canada</a>
+    <a href="colleges.html">Colleges</a>
+    <a href="blog.html">Resources</a>
+    <a href="book-consultation.html" class="btn btn-navy" style="text-align: center;">Book Consultation</a>
+  </div>
+
+  <!-- ════════ HERO ════════ -->
+  <section class="hero" style="padding: 5rem 0 4rem; text-align: center;">
+    <div class="container" style="max-width: 800px;">
+      <h1>Contact <span class="text-gold">Our Offices</span></h1>
+      <p style="margin-top: 1rem; font-size: 1.15rem; color: rgba(255,255,255,0.9);">Reach out to us directly via WhatsApp, Email, or the form below. We're here to help you get started.</p>
+    </div>
+  </section>
+
+  <!-- ════════ CONTACT LAYOUT ════════ -->
+  <section class="section bg-white">
+    <div class="container split" style="grid-template-columns: 0.8fr 1.2fr; gap: 4rem; align-items: start;">
+      
+      <!-- Contact Info Card -->
+      <div style="display: flex; flex-direction: column; gap: 2rem;">
+        <div class="feat-card" style="text-align: left; padding: 2rem;">
+          <h4 style="color:var(--c-navy); margin-bottom: 1rem;"><i class="fas fa-map-marker-alt" style="color:var(--c-gold); margin-right: 0.5rem;"></i> Head Office</h4>
+          <p style="font-size: 0.95rem; color: var(--c-text-light);">123 Education Blvd, Suite 400<br>Toronto, ON, Canada</p>
+        </div>
+        
+        <div class="feat-card" style="text-align: left; padding: 2rem;">
+          <h4 style="color:var(--c-navy); margin-bottom: 1rem;"><i class="fas fa-envelope" style="color:var(--c-gold); margin-right: 0.5rem;"></i> Email Support</h4>
+          <p style="font-size: 0.95rem; color: var(--c-text-light);"><a href="mailto:info@admissionnavigate.com">info@admissionnavigate.com</a></p>
+        </div>
+
+        <div class="feat-card" style="text-align: left; padding: 2rem;">
+          <h4 style="color:var(--c-navy); margin-bottom: 1rem;"><i class="fas fa-phone" style="color:var(--c-gold); margin-right: 0.5rem;"></i> Phone & WhatsApp</h4>
+          <p style="font-size: 0.95rem; color: var(--c-text-light); margin-bottom: 0.5rem;">Phone: +1 (778) 889-7490</p>
+          <a href="https://wa.me/17788897490" target="_blank" class="btn btn-gold btn-sm" style="margin-top: 0.5rem;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="hero-form" style="box-shadow: var(--shadow-md); border: 1px solid var(--c-border);">
+        <h3 style="color: var(--c-navy); margin-bottom: 0.25rem;">Send Us a Message</h3>
+        <p style="font-size: 0.9rem; color: var(--c-text-light); margin-bottom: 1rem;">Have a question about program availability, tuition, or study permits? Drop us a note.</p>
+        <form onsubmit="event.preventDefault(); alert('Message sent successfully! Our team will reply shortly.');">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" class="form-control" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" class="form-control" placeholder="john@example.com" required>
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" class="form-control" placeholder="e.g. Admission Query for Humber College" required>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea class="form-control" style="height: 120px; resize: none;" placeholder="Provide details about your academic background and query..." required></textarea>
+          </div>
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <div class="g-recaptcha" data-sitekey="6LceWYcaAAAAADo-k7s3bS-N7qLpM0F6X_X7w2p0" style="transform:scale(0.85); transform-origin:0 0;"></div>
+          </div>
+          <button type="submit" class="btn btn-navy btn-full">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════ FOOTER ════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <img src="assets/logo.jpg" alt="Admission Navigate Consultancy Logo">
+          <p>Admission Navigate Consultancy is your trusted partner for navigating college and university admissions across Canada.</p>
+          <div class="socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="foot-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="study-canada.html">Study in Canada</a></li>
+            <li><a href="colleges.html">Partner Colleges</a></li>
+          </ul>
+        </div>
+        
+        <div class="foot-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Education Blvd, Suite 400</li>
+            <li><i class="fas fa-envelope"></i> info@admissionnavigate.com</li>
+            <li><i class="fas fa-phone"></i> +1 (778) 889-7490</li>
+          </ul>
+        </div>
+        
+        <div class="foot-col">
+          <h4>Newsletter</h4>
+          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-bottom: 0;">Get the latest updates on Canadian intakes and visa rules.</p>
+          <form class="nl-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+            <input type="email" placeholder="Email Address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="foot-disclaimer">
+        <strong>Disclaimer:</strong> Admission Navigate Consultancy provides educational consulting and admission guidance services for institutions across Canada. We do not guarantee admission decisions. Any immigration-related information is general only and is not legal or regulated immigration advice.
+      </div>
+      
+      <div class="foot-bottom">
+        <div>&copy; <span id="year"></span> Admission Navigate Consultancy. All rights reserved. Designed and developed by dctechoffial <a href="https://www.instagram.com" target="_blank" style="margin-left:10px; color:var(--c-gold);"><i class="fab fa-instagram"></i></a></div>
+        <div class="foot-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/17788897490" target="_blank" class="wa-btn" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+  </script>
+</body>
+</html>

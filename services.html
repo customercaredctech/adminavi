@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | Admission Navigate Consultancy</title>
+  <meta name="description" content="Explore expert Canadian admissions services: Educational Counselling, University Selection, Program Selection, Admission Guidance, Scholarship Guidance, Interview Preparation, and Pre-Arrival Guidance.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <style>
+    .service-section { padding: 5rem 0; }
+    .service-section:nth-child(odd) { background: var(--c-white); }
+    .service-section:nth-child(even) { background: var(--c-bg); }
+    .svc-detail { display: grid; grid-template-columns: 80px 1fr; gap: 2rem; align-items: start; }
+    .svc-number {
+      width: 80px; height: 80px; flex-shrink: 0; border-radius: 50%;
+      background: var(--c-navy); color: var(--c-white);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-head); font-size: 1.75rem; font-weight: 800;
+    }
+    .svc-body h3 { color: var(--c-navy); font-size: 1.75rem; margin-bottom: 1rem; }
+    .svc-body p { color: var(--c-text-light); margin-bottom: 1rem; font-size: 1.05rem; }
+    .svc-body ul { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.6rem; }
+    .svc-body ul li { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.95rem; }
+    .svc-body ul li i { color: var(--c-gold); margin-top: 3px; flex-shrink: 0; }
+    .svc-tag {
+      display: inline-block; background: var(--c-gold); color: var(--c-white);
+      padding: 0.35rem 1rem; border-radius: 999px; font-size: 0.8rem;
+      font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 640px) { .svc-detail { grid-template-columns: 1fr; } .svc-number { width: 60px; height: 60px; font-size: 1.25rem; } }
+  </style>
+</head>
+<body>
+
+  <!-- ════════ HEADER ════════ -->
+  <header class="header">
+    <div class="container header-wrap">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.jpg" alt="Admission Navigate Consultancy">
+      </a>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="study-canada.html">Study in Canada</a></li>
+          <li><a href="colleges.html">Colleges</a></li>
+          <li><a href="blog.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="book-consultation.html" class="btn btn-navy">Book Consultation</a>
+      <button class="mobile-toggle" id="menuBtn"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="study-canada.html">Study in Canada</a>
+    <a href="colleges.html">Colleges</a>
+    <a href="blog.html">Resources</a>
+    <a href="contact.html">Contact</a>
+    <a href="book-consultation.html" class="btn btn-navy" style="text-align: center;">Book Consultation</a>
+  </div>
+
+  <!-- ════════ HERO ════════ -->
+  <section class="hero" style="padding: 5rem 0; text-align: center;">
+    <div class="container" style="max-width: 800px;">
+      <p style="color:var(--c-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 1rem;">What We Offer</p>
+      <h1>Complete Admission <span class="text-gold">Advisory Services</span></h1>
+      <p style="margin-top: 1rem; font-size: 1.15rem; color: rgba(255,255,255,0.9);">From career counselling to pre-departure briefings — we support you at every single step of your Canadian education journey.</p>
+    </div>
+  </section>
+
+  <!-- ════════ SERVICE 1: EDUCATIONAL COUNSELLING ════════ -->
+  <section class="service-section">
+    <div class="container">
+      <div class="svc-detail">
+        <div class="svc-number">1</div>
+        <div class="svc-body">
+          <span class="svc-tag"><i class="fas fa-comments"></i> Counselling</span>
+          <h3>Educational Counselling</h3>
+          <p>Our certified education counselors conduct structured, in-depth one-on-one sessions to fully understand your academic history, test score status, career aspirations, provincial preferences, and overall budget before recommending any course of action.</p>
+          <p>We do not provide a generic list of colleges. Every recommendation is based on a detailed academic profiling exercise designed specifically for your unique situation.</p>
+          <ul>
+            <li><i class="fas fa-check"></i> In-depth academic background review (10th, 12th, Graduation transcripts)</li>
+            <li><i class="fas fa-check"></i> IELTS/PTE/TOEFL score assessment and gap analysis</li>
+            <li><i class="fas fa-check"></i> Long-term career roadmap planning aligned with Canadian labour market</li>
+            <li><i class="fas fa-check"></i> Budget and funding feasibility evaluation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ SERVICE 2: COLLEGE & UNIVERSITY SELECTION ════════ -->
+  <section class="service-section">
+    <div class="container">
+      <div class="svc-detail">
+        <div class="svc-number">2</div>
+        <div class="svc-body">
+          <span class="svc-tag"><i class="fas fa-university"></i> Institution Selection</span>
+          <h3>College &amp; University Selection</h3>
+          <p>With direct partnerships at over 150 Designated Learning Institutions (DLIs) across Canada, we shortlist the most suitable institutions for your profile. We consider academic requirements, tuition fees, intake availability, PGWP eligibility, and campus location.</p>
+          <p>We distinguish between public colleges (typically offering lower tuition and higher PGWP eligibility) and research-intensive universities, helping you choose the best pathway for your financial and career goals.</p>
+          <ul>
+            <li><i class="fas fa-check"></i> Shortlisting 3–5 best-matched DLIs across Ontario, BC, Alberta, and Atlantic Canada</li>
+            <li><i class="fas fa-check"></i> Analysis of PGWP duration eligibility per institution</li>
+            <li><i class="fas fa-check"></i> On-campus vs. off-campus accommodation availability</li>
+            <li><i class="fas fa-check"></i> Intake timeline matching (September, January, May)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ SERVICE 3: PROGRAM SELECTION ════════ -->
+  <section class="service-section">
+    <div class="container">
+      <div class="svc-detail">
+        <div class="svc-number">3</div>
+        <div class="svc-body">
+          <span class="svc-tag"><i class="fas fa-book-open"></i> Program Selection</span>
+          <h3>Program Selection</h3>
+          <p>Choosing the right program code is critical — not just for admission, but for your subsequent study permit and PGWP application. We map trending, high-demand programs in fields like STEM, Business, Health Sciences, and Hospitality that match Canadian labour market projections.</p>
+          <ul>
+            <li><i class="fas fa-check"></i> Diploma, Advanced Diploma, Post-Graduate Certificate, Bachelor's &amp; Master's programs</li>
+            <li><i class="fas fa-check"></i> Co-op and internship-integrated programs for early work experience</li>
+            <li><i class="fas fa-check"></i> Programs with strong NOC code alignment for future PR pathways</li>
+            <li><i class="fas fa-check"></i> Credit transfer options from your existing degree</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ SERVICE 4: ADMISSION GUIDANCE ════════ -->
+  <section class="service-section">
+    <div class="container">
+      <div class="svc-detail">
+        <div class="svc-number">4</div>
+        <div class="svc-body">
+          <span class="svc-tag"><i class="fas fa-paper-plane"></i> Admission</span>
+          <h3>Admission Guidance</h3>
+          <p>Our dedicated admissions officers manage the entire application process on your behalf. We prepare, review, and compile all required academic documents, language test scores, reference letters, and supporting materials — then submit them directly to the college representatives we work with.</p>
+          <ul>
+            <li><i class="fas fa-check"></i> SOP (Statement of Purpose) writing, editing, and review</li>
+            <li><i class="fas fa-check"></i> Transcript formatting, notarization, and back-log certificate guidance</li>
+            <li><i class="fas fa-check"></i> Letter of Recommendation (LOR) drafting assistance</li>
+            <li><i class="fas fa-check"></i> Direct application submission through our college partnerships for faster LOA turnaround</li>
+            <li><i class="fas fa-check"></i> Tuition deposit and initial enrollment fee payment guidance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ SERVICE 5: SCHOLARSHIP GUIDANCE ════════ -->
+  <section class="service-section">
+    <div class="container">
+      <div class="svc-detail">
+        <div class="svc-number">5</div>
+        <div class="svc-body">
+          <span class="svc-tag"><i class="fas fa-gift"></i> Scholarships</span>
+          <h3>Scholarship Guidance</h3>
+          <p>Canadian colleges offer a wide range of entrance scholarships, merit bursaries, and regional grants to international students that are often under-utilized. We identify eligibility windows and guide you through the application process to reduce your financial burden significantly.</p>
+          <ul>
+            <li><i class="fas fa-check"></i> Entrance scholarship identification per institution</li>
+            <li><i class="fas fa-check"></i> Scholarship application essay review and optimization</li>
+            <li><i class="fas fa-check"></i> Government of Canada bursary and grants information</li>
+            <li><i class="fas fa-check"></i> External organization scholarship databases</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ SERVICE 6: INTERVIEW PREPARATION ════════ -->
+  <section class="service-section">
+    <div class="container">
+      <div class="svc-detail">
+        <div class="svc-number">6</div>
+        <div class="svc-body">
+          <span class="svc-tag"><i class="fas fa-microphone"></i> Optional</span>
+          <h3>Interview Preparation <span style="font-size: 1rem; color: var(--c-text-light); font-weight: 400;">(Optional)</span></h3>
+          <p>Some elite master's programs, health sciences programs, and selective colleges require an admission interview as part of the selection process. Our experienced coaches run targeted mock interviews, provide feedback on tone and structure, and help you respond confidently.</p>
+          <ul>
+            <li><i class="fas fa-check"></i> Mock admission interview sessions (video/phone format)</li>
+            <li><i class="fas fa-check"></i> Common question bank preparation for your specific program</li>
+            <li><i class="fas fa-check"></i> Body language, clarity of speech, and professional presentation coaching</li>
+            <li><i class="fas fa-check"></i> Verbal explanation of your academic gaps or background if needed</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ SERVICE 7: PRE-ARRIVAL GUIDANCE ════════ -->
+  <section class="service-section">
+    <div class="container">
+      <div class="svc-detail">
+        <div class="svc-number">7</div>
+        <div class="svc-body">
+          <span class="svc-tag"><i class="fas fa-plane-arrival"></i> Pre-Arrival</span>
+          <h3>Pre-Arrival Guidance</h3>
+          <p>Your journey doesn't end with a study permit. We prepare you completely for landing in Canada, from opening your GIC-linked bank account, to understanding provincial health insurance, what to carry at the border, and finding your first accommodation.</p>
+          <ul>
+            <li><i class="fas fa-check"></i> GIC (Guaranteed Investment Certificate) account setup: Scotiabank/CIBC guidance</li>
+            <li><i class="fas fa-check"></i> Provincial health card enrollment (OHIP, MSP, AHCIP)</li>
+            <li><i class="fas fa-check"></i> CBSA port of entry documents checklist</li>
+            <li><i class="fas fa-check"></i> SIN (Social Insurance Number) registration on arrival</li>
+            <li><i class="fas fa-check"></i> Temporary and permanent housing search strategies</li>
+            <li><i class="fas fa-check"></i> Weather, culture, and campus orientation briefing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ TESTIMONIALS ════════ -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="sec-title">
+        <h2>What Students <span class="text-gold">Say</span></h2>
+        <p>Thousands of students have trusted us to guide their journey to Canada.</p>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"The team at Admission Navigate was incredibly supportive. They guided me through program selection and my visa arrived in just 4 weeks!"</p>
+          <div class="testi-user">
+            <div class="testi-av">R</div>
+            <div><h5>Rahul M.</h5><span>Seneca College, Toronto</span></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"I was overwhelmed by the LOA and GIC process, but my counselor made it completely stress-free. Highly recommended for Canada aspirants."</p>
+          <div class="testi-user">
+            <div class="testi-av">S</div>
+            <div><h5>Sarah A.</h5><span>Langara College, Vancouver</span></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+          <p>"Very professional and transparent. They helped me build a very strong SOP that got me accepted. The pre-arrival session was extremely helpful."</p>
+          <div class="testi-user">
+            <div class="testi-av">D</div>
+            <div><h5>David K.</h5><span>Dalhousie University, Halifax</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ FINAL CTA ════════ -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Ready to Begin? Let's Plan Your Pathway</h2>
+        <p>Book a free, no-obligation profile assessment session with one of our expert advisors today.</p>
+        <a href="book-consultation.html" class="btn btn-navy" style="background: var(--c-navy-dark); color: white; border-radius: 999px; padding: 1rem 3rem;">Book Free Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ FAQ ════════ -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="sec-title">
+        <h2>Service <span class="text-gold">FAQs</span></h2>
+      </div>
+      <div class="faq-box">
+        <div class="faq-item open">
+          <div class="faq-q">Are your services free of charge? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a">The initial profile assessment and counselling consultation is completely free. Service fees for full application management are discussed transparently at the time of engagement.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do you guarantee visa approval? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a">No. We provide educational consulting services and help you build the strongest possible application, but final visa decisions are made solely by IRCC. We do not provide immigration legal advice.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How long does the full process take from consultation to visa? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a">Typically 3–5 months: 2–4 weeks for offer letter, 4–6 weeks for study permit under SDS. We plan your timeline based on the target intake date.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ FOOTER ════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <img src="assets/logo.jpg" alt="Admission Navigate Consultancy Logo">
+          <p>Your trusted partner for navigating college and university admissions across Canada.</p>
+          <div class="socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="foot-col">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="services.html#counselling">Educational Counselling</a></li>
+            <li><a href="services.html#selection">College Selection</a></li>
+            <li><a href="services.html#admission">Admission Guidance</a></li>
+            <li><a href="services.html#scholarship">Scholarship Help</a></li>
+            <li><a href="services.html#pre-arrival">Pre-Arrival Guidance</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Education Blvd, Suite 400</li>
+            <li><i class="fas fa-envelope"></i> info@admissionnavigate.com</li>
+            <li><i class="fas fa-phone"></i> +1 (778) 889-7490</li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h4>Newsletter</h4>
+          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-bottom: 0;">Intake alerts, visa updates, and scholarship news.</p>
+          <form class="nl-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+            <input type="email" placeholder="Email Address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="foot-disclaimer">
+        <strong>Disclaimer:</strong> Admission Navigate Consultancy provides educational consulting and admission guidance services for institutions across Canada. We do not guarantee admission decisions. Any immigration-related information is general only and is not legal or regulated immigration advice.
+      </div>
+      <div class="foot-bottom">
+        <div>&copy; <span id="year"></span> Admission Navigate Consultancy. All rights reserved. Designed and developed by dctechoffial <a href="https://www.instagram.com" target="_blank" style="margin-left:10px; color:var(--c-gold);"><i class="fab fa-instagram"></i></a></div>
+        <div class="foot-links"><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/17788897490" target="_blank" class="wa-btn" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+    const faqs = document.querySelectorAll('.faq-item');
+    faqs.forEach(item => {
+      item.querySelector('.faq-q').addEventListener('click', () => {
+        faqs.forEach(other => { if (other !== item) other.classList.remove('open'); });
+        item.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>
